@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <style>
+        header {
+            padding: 0px 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        @media(min-width:1000px) {
+            body {
+                background: url('./images/3.jpg');
+            }
+        }
+        
+        body {
+            background-color: #dddddd;
+        }
+        
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        
+        header>form {
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        #searchInput {
+            box-shadow: 0 16px 32px 0 rgb(0 0 0 / 7%), 0 1px 3px 0 rgb(0 0 0 / 2%), 0 0 0 1px rgb(0 0 0 / 10%);
+            border: 1px solid rgba(255, 255, 255, .95);
+            appearance: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, .95);
+        }
+        
+        #search_icon {
+            appearance: none;
+            border: none;
+            font-size: 20px;
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            background-color: transparent;
+        }
+        
+        #siteList {
+            padding: 0px 20px;
+        }
+        
+        #siteList>ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        #siteList>ul>li:hover a {
+            background-color: #eee;
+        }
+        
+        #siteList>ul>li {
+            width: 136px;
+            position: relative;
+        }
+        
+        #siteList>ul>li .close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            display: none;
+        }
+        
+        #siteList>ul>li:hover .close {
+            display: block;
+        }
+        
+        #siteList>ul>li>a {
+            box-shadow: 0 6px 10px rgb(95 101 105 / 15%);
+            display: block;
+            border-radius: 5px;
+            background-color: #fff;
+            min-width: 136px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 40px 0px;
+        }
+        
+        #siteList>ul>li #logo {
+            font-size: 36px;
+        }
+        
+        #siteList ul li #text {
+            width: 136px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center
+        }
+        
+        @media (min-width:585px) {
+            #siteList,
+            header>form {
+                width: 585px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header>form {
+                margin: 50px auto;
+            }
+            #siteList>ul {
+                margin-right: -12px;
+                justify-content: flex-start;
+            }
+            #siteList>ul li {
+                margin-right: 12px;
+            }
+        }
+        
+        @media (min-width:876px) {
+            #siteList,
+            header>form {
+                width: 876px;
+            }
+            header>form {
+                margin: 80px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <form action="http://www.baidu.com/s" target="_self">
+            <input type="text" id="searchInput" name="wd" method="get" placeholder="在Baidu上搜索，或者输入一个网址">
+            <button type="submit" id="search_icon">
+                <svg class="icon" aria-hidden="true" >
+                    <use xlink:href="#icon-sousuo"></use>
+                </svg>
+            </button>
+
+        </form>
+    </header>
+
+    <main id="siteList">
+        <ul>
+            <li class="addCard">
+                <a href="#">
+                    <div id="logo">
+                        <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tianjia"></use>
+                    </svg></div>
+                    <div id="text">
+                        新增
+                    </div>
+                </a>
+
+            </li>
+        </ul>
+    </main>
+    <script src="//at.alicdn.com/t/font_3222301_s04979xedeo.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-KcyRSlC9FQog/lJsT+QA8AUIFBgnwKM7bxm7/YaX+NTr4D00npYawrX0h+oXI3a2" src="https://lib.baomitu.com/jquery/1.12.4/jquery.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
